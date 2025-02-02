@@ -5,5 +5,5 @@ register_page(__name__, '/')
 def layout():
     return [
         html.H1("Public page"),
-        dcc.Link("View private page", href="/private"),
+        dcc.Link("View private page", href="/private", refresh=True),
     ]
