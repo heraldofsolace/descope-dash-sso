@@ -2,4 +2,4 @@ dash
 pandas
 numpy
 python-dotenv
-
+dash-auth
