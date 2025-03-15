@@ -13,7 +13,7 @@ auth.register_provider(
     token_endpoint_auth_method="client_secret_post",
     client_id=os.getenv("DESCOPE_CLIENT_ID"),
     client_secret=os.getenv("DESCOPE_CLIENT_SECRET"),
-    server_metadata_url="https://api.descope.com/P2sQdG3RMb9A3wikGsti6ZhpN8GM/.well-known/openid-configuration",
+    server_metadata_url=f"https://api.descope.com/{os.getenv("DESCOPE_CLIENT_ID")}/.well-known/openid-configuration",
     client_kwargs={"scope": "openid email profile"}
 )
 
