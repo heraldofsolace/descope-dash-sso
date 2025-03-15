@@ -1,5 +1,4 @@
 from dash import Input, Output, html, dcc, callback, register_page
-from dash_auth import public_callback
 import pandas as pd
 import plotly.express as px
 
@@ -12,7 +11,7 @@ layout = [
     dcc.Graph(id='graph-content')
 ]
 
-@public_callback(
+@callback(
     Output('graph-content', 'figure'),
     Input('dropdown-selection', 'value')
 )
